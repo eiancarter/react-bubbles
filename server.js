@@ -100,7 +100,7 @@ function authenticator(req, res, next) {
   }
 }
 
-app.post("/api/login", (req, res) => {
+app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
   if (username === "asdf" && password === "1234") {
     req.loggedIn = true;

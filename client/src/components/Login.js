@@ -14,14 +14,14 @@ const Login = (props) => {
     e.preventDefault();
     setIsLoading(true);
     axiosWithAuth()
-      .post('/api/login', credentials)
-      .then(res => {
-        setIsLoading(false)
-        console.log('authentication response', res)
-        localStorage.setItem('token', res.data.payload)
-        history.push('/bubble-page');
-      })
-      .catch(err => console.log(err));
+    .post('/api/login', credentials)
+    .then(res => {
+      setIsLoading(false)
+      console.log('authentication response', res);
+      localStorage.setItem('token', res.data.payload);
+      history.push('/bubble-page');
+    })
+    .catch(err => console.log(err));
   }
 
   const handleChange = e => {
